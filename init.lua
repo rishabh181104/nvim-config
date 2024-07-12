@@ -28,3 +28,6 @@ require("core.options")
 require("core.keymaps")
 
 vim.g.python3_host_prog = '/usr/bin/python'
+
+vim.g.slime_target = "neovim"
+vim.g.slime_bracketed_paste = 1

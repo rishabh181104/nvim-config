@@ -22,21 +22,21 @@
 -- }
 
 -- Tokyo Night Theme
-return {
-    -- https://github.com/folke/tokyonight.nvim
-    'folke/tokyonight.nvim', -- you can replace this with your favorite colorscheme
-    lazy = false,            -- we want the colorscheme to load immediately when starting neovim
-    priority = 1000,         -- load the colorscheme before other non-lazy-loaded plugins
-    opts = {
-        -- replace this with your scheme-specific settings or remove to use the defaults
-        transparent = true,
-        style = "night", -- other variations "storm, night, moon, day"
-    },
-    config = function(_, opts)
-        require('tokyonight').setup(opts) -- replace this with your favorite colorscheme
-        vim.cmd("colorscheme tokyonight") -- replace this with your favorite colorscheme
-    end
-}
+-- return {
+--     -- https://github.com/folke/tokyonight.nvim
+--     'folke/tokyonight.nvim', -- you can replace this with your favorite colorscheme
+--     lazy = false,            -- we want the colorscheme to load immediately when starting neovim
+--     priority = 1000,         -- load the colorscheme before other non-lazy-loaded plugins
+--     opts = {
+--         -- replace this with your scheme-specific settings or remove to use the defaults
+--         transparent = true,
+--         style = "night", -- other variations "storm, night, moon, day"
+--     },
+--     config = function(_, opts)
+--         require('tokyonight').setup(opts) -- replace this with your favorite colorscheme
+--         vim.cmd("colorscheme tokyonight") -- replace this with your favorite colorscheme
+--     end
+-- }
 
 -- Catppuccin Theme
 -- return {
@@ -78,4 +78,75 @@ return {
 -- config = function(_, opts)
 --   vim.cmd("colorscheme onenord") -- replace this with your favorite colorscheme
 -- end
+-- }
+--
+-- return {
+-- {
+--     'morhetz/gruvbox',
+--     config = function()
+--         vim.cmd('colorscheme gruvbox')
+--                     vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
+--     end
+-- }
+-- }
+--
+-- return {
+--     {
+--         'olimorris/onedarkpro.nvim',
+--         lazy = true,
+--         priority = 1000,
+--         config = function()
+--             require('onedarkpro').setup()
+--             vim.cmd('colorscheme onedarkpro')
+--             vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
+--         end
+--     }
+-- }
+
+-- return {
+-- {
+-- 'altercation/vim-colors-solarized',
+-- config = function()
+--     vim.cmd('colorscheme solarized')
+--      vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
+-- end
+-- }
+-- }
+--
+-- return {
+--     {
+--         'arcticicestudio/nord-vim',
+--         config = function()
+--             vim.g.nord_disable_background = true
+--             vim.cmd('colorscheme nord')
+--         end
+--     }
+-- }
+--
+return {
+    {
+        'marko-cerovac/material.nvim',
+        config = function()
+            require('material').setup({
+                disable = {
+                    background = true,
+                },
+            })
+            vim.cmd('colorscheme material')
+        end
+    }
+}
+
+-- return {
+--     {
+--         'EdenEast/nightfox.nvim',
+--         config = function()
+--             require('nightfox').setup({
+--                 options = {
+--                     transparent = true,
+--                 }
+--             })
+--             vim.cmd('colorscheme nightfox')
+--         end
+--     }
 -- }

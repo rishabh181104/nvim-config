@@ -128,3 +128,9 @@ vim.api.nvim_set_keymap('n', '<leader>bm', ':BufferLineMoveNext<CR>', { noremap 
 vim.api.nvim_set_keymap('n', '<leader>bk', ':BufferLineMovePrev<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>bc', ':BufferLinePick<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>bx', ':BufferLineCloseOthers<CR>', { noremap = true, silent = true })
+
+-- Move cursor between split windows using capital letters
+vim.keymap.set('n', 'H', '<C-w>h', { noremap = true, silent = true })
+vim.keymap.set('n', 'J', '<C-w>j', { noremap = true, silent = true })
+vim.keymap.set('n', 'K', '<C-w>k', { noremap = true, silent = true })
+vim.keymap.set('n', 'L', '<C-w>l', { noremap = true, silent = true })
