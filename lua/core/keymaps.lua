@@ -134,3 +134,15 @@ vim.keymap.set('n', 'H', '<C-w>h', { noremap = true, silent = true })
 vim.keymap.set('n', 'J', '<C-w>j', { noremap = true, silent = true })
 vim.keymap.set('n', 'K', '<C-w>k', { noremap = true, silent = true })
 vim.keymap.set('n', 'L', '<C-w>l', { noremap = true, silent = true })
+
+-- Map <leader>r to run the current Python file
+vim.api.nvim_set_keymap('n', '<leader>rr', ':w<CR>:!python3 %<CR>', { noremap = true, silent = true })
+
+-- Floaterm setup
+vim.cmd [[
+  nnoremap <silent> <F7> :FloatermToggle<CR>
+  nnoremap <silent> <F8> :FloatermNew<CR>
+  nnoremap <silent> <F9> :FloatermPrev<CR>
+  nnoremap <silent> <F10> :FloatermNext<CR>
+  tnoremap <silent> <Esc> <C-\><C-n>:FloatermToggle<CR>
+]]
